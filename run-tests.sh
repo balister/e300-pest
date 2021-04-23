@@ -7,3 +7,5 @@ fi
 
 ssh root@$1 cat /etc/build > ptest.log
 ssh root@$1 ptest-runner >> ptest.log
+
+sed  -i 's/\s*[0-9]*\.[0-9][0-9] sec//' ptest.log
